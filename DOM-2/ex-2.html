@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p>im a paragraph-1 tag</p>
+    <h2>im h2 tag</h2>
+    <p>im a paragraph-2 tag </p>
+    <h1>im a h1 tag</h1>
+    <p>this i pargraph-3 tag</p>
+</body>
+</html>
+<script>
+let para= document.getElementsByTagName("p");
+console.log(para);
+for (let i=0;i<para.length;i++){
+    console.log(para[i]);
+}
+let h1=document.getElementsByTagName("h1");
+console.log(h1);
+h1[0].style.color="red";
+h1[0].style.fontSize="60px"
+// applying styles on javascript in html
+</script>
