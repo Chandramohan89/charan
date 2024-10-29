@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="links">
+        <div><a href="./index.html">Home</a></div>
+        <div><a href="./application.html">Applied jobs</a></div>
+        <div><a href="">Bookmarks</a></div>
+             </div>
+
+             <main>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Job applied</th>
+                            <th>Salary expected</th>
+                            <th>Add to Bookmark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- data will be coming from javaScript -->
+                    </tbody>
+                </table>
+             </main>
+</body>
+</html>
+
+<script>
+    let jobArr=JSON.parse(localStorage.getItem("jobList"));
+   jobArr.forEach(
+    function(element){
+        let tr=document.createElement("tr");
+        
+        let td1=document.createElement("td");
+        td1.innerText=element.personName;
+        let td2=document.createElement("td");
+        td2.innerText=element.personEmail;
+        let td3=document.createElement("td");
+        td3.innerText=element.personRole;
+        let td4=document.createElement("td");
+        td4.innerText=element.personSalary
+        let td5=document.createElement("td");
+        td5.innerText="Bookmark";
+        td5.addEventListener("click",function(){
+            bookMarkFun(element);
+        })
+        tr.append(td1,td2,td3,td4,td5);
+        document.querySelector("tbody").append(tr);
+    }
+   );
+   let bookMarkArr=JSON.parse(localStorage.getItem("bookmarks")) || [];
+   function bookMarkFun(element){
+    bookMarkArr.push(element);
+    localStorage.setItem("bookmarks",JSON.stringify(bookMarkArr));
+   }
+</script>
