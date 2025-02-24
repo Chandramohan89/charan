@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+   
 </body>
 </html>
+<script>
+    function studentDetails (firstName , lastName){
+        this.firstName=firstName;
+        this.lastName=lastName;
+
+        this.print=function(){ // any function inside an object that function is called method.
+            console.log(this.firstName+this.lastName); 
+            
+            // particular function is stored in object called student that is a method 
+
+            // this.print is used to trigger a object of "new" mentioned key word that key word is triggred and gives an output 
+
+        }
+    }
+
+    let student = new studentDetails("charan","k");
+    console.log(student);
+
+    let student2=new studentDetails("mohan","k");
+    console.log(student2);
+
+    let student3=new studentDetails("chandra","k");
+    console.log(student3);
+</script>
