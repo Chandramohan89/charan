@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let grandFather={
+        name:"apparao",
+        age:75,
+        place:"lankelapalem",
+        DNA:"saiyan",
+        bloodGroup:"o+",
+    };
+
+    let father = Object.create(grandFather);
+
+    father.name="govindaRao";
+    father.houseName="earth";
+    // console.log(father);
+    // console.log(father.DNA);
+
+    let son = Object.create(father);
+
+    // grandFather-->father--->son
+    son.name="charan";
+    son.age="24";
+    // console.log(son);
+
+    // console.log(son.bloodGroup);
+
+    // [[prototype]]---> this points to the original model from which it is  built
+
+    // console.log(son.__proto__); // father
+
+    // console.log(son.__proto__.__proto__);// grandFather
+
+    // console.log(son.__proto__.__proto__.__proto__);// object
+
+    // console.log(son.__proto__.__proto__.__proto__.__proto__);//null
+
+
+    let array=[1,2,3];
+    
+    console.log(array.__proto__.__proto__.__proto__);
+
+    
+</script>

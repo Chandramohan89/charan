@@ -15,7 +15,7 @@
         this.lastName=lastName;
 
         this.print=function(){ // any function inside an object that function is called method.
-            console.log(this.firstName+this.lastName); 
+            console.log(this.firstName+ " " +this.lastName); 
             
             // particular function is stored in object called student that is a method 
 
@@ -32,4 +32,6 @@
 
     let student3=new studentDetails("chandra","k");
     console.log(student3);
+
+    console.log(student.print());
 </script>
