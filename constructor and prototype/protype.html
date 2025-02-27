@@ -32,7 +32,7 @@
     // grandFather-->father--->son
     son.name="charan";
     son.age="24";
-    // console.log(son);
+    console.log(son.hasOwnProperty("name"));
 
     // console.log(son.bloodGroup);
 
@@ -50,6 +50,21 @@
     let array=[1,2,3];
     
     console.log(array.__proto__.__proto__.__proto__);
+
+    let string="chandra mohan"; // []
+      // it will create an array method 
+    console.log(string.split(" "));   
+
+
+
+    // object---> array
+    //     ---> function
+    //     ----> string 
+    //     ----> number;
+
+        // (array.__proto__.__proto__.__proto__);
+        // this is called prototype chain
+
 
     
 </script>
