@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: lightblue;
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(3,200px);
+            grid-template-rows:repeat(2,200px);
+            gap: 20px 10px;
+            grid-template-areas:
+            "green salmon grey yellow coral darkblue";
+           
+                }
+        #container > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        #container > div:nth-child(1){
+            background-color: aquamarine;
+            grid-area: green;
+        }
+        #container >div:nth-child(2){
+            background-color: grey;
+            grid-area: salmon;
+        }
+        #container >div:nth-child(3){
+            background-color: rgb(216, 95, 95);
+            grid-area: grey;
+        }
+        #container >div:nth-child(4){
+            background-color: rgb(170, 233, 134);
+            grid-area: yellow;
+        }
+        #container >div:nth-child(5){
+            background-color: rgb(122, 159, 228);
+            grid-area: coral;
+        }
+        #container >div:nth-child(6){
+            background-color: rgb(202, 127, 219);
+            grid-area: darkblue;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        
+    </div>
+</body>
+</html>

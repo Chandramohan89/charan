@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    img{
+        height: 300px;
+        width: 300px;
+    }
+   </style>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <div id="container">
+        
+    </div>
+</body>
+</html>
+
+<script>
+    var images=[
+      "https://th.bing.com/th/id/OIP.O8UVPzQ1aeYBSVLKs0EHzwHaJP?w=124&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "https://th.bing.com/th/id/OIP.VXEFPXylOF9QfKyjaLTpBQHaIv?w=164&h=193&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "https://th.bing.com/th/id/OIP.ByQZmqAiJlVPft5IU4hKhwHaKL?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "https://th.bing.com/th/id/OIP.jXlpc54FtULeUSnoKz6V7QHaJV?w=119&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      "https://th.bing.com/th/id/OIP.-THaTxHrAvfmV30e-BBJSQHaJn?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+];
+
+    let id ;
+    function start(){
+        
+        let slideImage=document.createElement("img");
+        
+        let i=0;
+        
+        id=setInterval(function(){
+            if(i==images.length){
+                i=0;
+            };
+            slideImage.src=images[i++];
+            document.querySelector("#container").append(slideImage);
+
+        },3000);
+            
+        
+        
+    }
+
+    function stop(){
+        clearInterval(id);
+        document.querySelector("#container").innerHTML=""
+    }
+
+</script> 

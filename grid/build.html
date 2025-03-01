@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: lightblue;
+            display: grid;
+            padding: 20px;
+            grid-template-columns: repeat(2,50px) ;
+            grid-template-rows: repeat(3,50px);
+            gap: 20px 10px;
+                }
+        #container > div{
+            padding: 20px;
+        }
+        #container > div:nth-child(1){
+            background-color: aquamarine;
+        }
+        #container >div:nth-child(2){
+            background-color: grey;
+        }
+        #container >div:nth-child(3){
+            background-color: rgb(216, 95, 95);
+        }
+        #container >div:nth-child(4){
+            background-color: rgb(170, 233, 134);
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        
+        
+    </div>
+</body>
+</html>
