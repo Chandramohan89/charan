@@ -13,4 +13,18 @@
     let a=10;
     b=20;
     console.log(a+b);
+
+    function outerFunction() {
+    let a = 0;
+    return function innerFunction() {
+      a++;
+      console.log(a);
+    };
+  }
+  let output = outerFunction();
+
+  console.log(output);
+
+  output();
+
 </script>
