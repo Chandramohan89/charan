@@ -6,25 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" oninput="onSearchInput()"/>
 </body>
 </html>
+
 <script>
-    let a=10;
-    b=20;
-    console.log(a+b);
 
-    function outerFunction() {
-    let a = 0;
-    return function innerFunction() {
-      a++;
-      console.log(a);
-    };
-  }
-  let output = outerFunction();
+    function debounce(func,delay){ // debounce function inside that two parameters func and delay 
+        let timeoutId; // setTimeOut Id;
+        return function(arg){ // arg=input value
 
-  console.log(output);
+            clearTimeout(timeoutId);
+            timeoutId=setTimeout(()=>{
+                func(arg);
+            },delay)
 
-  output();
+        }; // inner function 
+    }
+    function FetchData(query){
+        console.log('Processing search Query ${query}')
+    }
 
+    const debouncedProcessSearchQuery=debounce(FetchData,5000);
+    function onSearchInput(){
+        const query=event.target.value;
+        debouncedProcessSearchQuery(event.target.value);
+
+    }
 </script>
