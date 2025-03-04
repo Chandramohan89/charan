@@ -10,5 +10,15 @@
 </body>
 </html>
 <script>
-    
+    function debounce(func,delay){ // debounce function inside that two parameters func and delay 
+        let timeoutId; // setTimeOut Id;
+        return function(arg){ // arg=input value
+
+            clearTimeout(timeoutId);
+            timeoutId=setTimeout(()=>{
+                func(arg);
+            },delay)
+
+        }; // inner function 
+    }
 </script>
