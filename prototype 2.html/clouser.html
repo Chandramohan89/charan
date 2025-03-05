@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //   function outerFunction(batch) {
+  //     let name = "Mozilla"; // inner function ---> outer function is global  scope
+  //     // innerfunction  is lexically scope with outer function
+  //     return function innerFunction() {
+  //       console.log("outerFunction", name, batch);
+  //     };
+  //   }
+  //   let output = outerFunction("flm");
+  //   //here the outerFunctionn execution is complete
+  //   console.log(output);
+
+  //   output(); // internally we are calling innerFunction
+  // we can access name and batch by closure concept.
+
+  // closure---> imagine there are two function
+  //   1. outer function and
+  //   2. inner function
+  // the inner function is present inside the outer function
+
+  // now the inner function can access outer functions variable, parameter even though  the outer function execution is completed
+
+  //  the inner function is lexically scoped to outer function
+  //  inner function has a scope where it can access outer function variable and parameter.
+
+  function outerFunction() {
+    let a = 0;
+    return function innerFunction() {
+      a++;
+      console.log(a);
+    };
+  }
+  let output = outerFunction();
+
+  console.log(output);
+
+  output();
+  // debouncing and throttling --->
+</script>
